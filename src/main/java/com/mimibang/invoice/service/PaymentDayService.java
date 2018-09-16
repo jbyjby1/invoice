@@ -1,7 +1,7 @@
 package com.mimibang.invoice.service;
 
+import com.mimibang.invoice.dao.PaymentDayMapper;
 import com.mimibang.invoice.domain.PaymentDay;
-import com.mimibang.invoice.mapper.PaymentDaysMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,10 +16,10 @@ import java.util.UUID;
 public class PaymentDayService {
 
     @Autowired
-    private PaymentDaysMapper paymentDaysMapper;
+    private PaymentDayMapper paymentDayMapper;
 
     public List<PaymentDay> queryAllPaymentDays(){
-        return paymentDaysMapper.queryAll();
+        return paymentDayMapper.selectByExample(null);
     }
 
     public Boolean addPaymentDay(PaymentDay paymentDay){
@@ -29,7 +29,7 @@ public class PaymentDayService {
         if(StringUtils.isBlank(paymentDay.getUuid())){
             paymentDay.setUuid(UUID.randomUUID().toString());
         }
-        int result = paymentDaysMapper.add(paymentDay);
+        int result = paymentDayMapper.insert(paymentDay);
         return result > 0;
     }
 }

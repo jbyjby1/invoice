@@ -1,6 +1,5 @@
 package com.mimibang.invoice.controller;
 
-import com.mimibang.invoice.domain.PaymentDay;
 import com.mimibang.invoice.domain.RsPaymentDay;
 import com.mimibang.invoice.service.PaymentDayService;
 import com.mimibang.invoice.util.JsonUtils;
@@ -11,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 /**

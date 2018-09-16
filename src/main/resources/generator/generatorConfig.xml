@@ -27,7 +27,7 @@
             <!-- <property name="trimStrings" value="true"/> -->
         </javaModelGenerator> 
 		<!-- xml -->
-        <sqlMapGenerator targetPackage="com.mimibang.invoice.maper"
+        <sqlMapGenerator targetPackage="com.mimibang.invoice.mapper"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
@@ -43,7 +43,7 @@
          <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table> -->
 
-        <table tableName="payment_days"
+        <table tableName="payment_day"
             enableCountByExample="true"
             enableUpdateByExample="true"
             enableDeleteByExample="true"

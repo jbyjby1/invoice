@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS invoice DEFAULT CHARSET utf8 COLLATE utf8_general_
 
 use invoice;
 
-create table if not exists payment_days(
+create table if not exists payment_day(
     uuid varchar(64),
 	  name varchar(64),
     description varchar(256),
